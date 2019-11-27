@@ -1,0 +1,36 @@
+﻿<Page x:Class="WpfApp1.Agregarelemento"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Agregarelemento">
+
+    <Grid>
+        <Label Content="Titulo" HorizontalAlignment="Left" Margin="35,43,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="19,108,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <Label Content="Sinopsis" HorizontalAlignment="Left" Margin="381,242,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <Label Content="Director" HorizontalAlignment="Left" Margin="19,170,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <Label Content="Año" HorizontalAlignment="Left" Margin="61,244,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <Label Content="Calificacion" HorizontalAlignment="Left" Margin="208,383,0,0" VerticalAlignment="Top" FontFamily="GothicE" FontSize="20" Width="216"/>
+        <TextBox x:Name="titu" HorizontalAlignment="Left" Height="39" Margin="135,43,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="384" TextChanged="TextBox_TextChanged" FontFamily="GothicE"/>
+        <TextBox x:Name="año" HorizontalAlignment="Left" Height="39" Margin="135,244,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" FontFamily="GothicE"/>
+        <ComboBox x:Name="comboboxGenero"  HorizontalAlignment="Left" Margin="135,108,0,0" VerticalAlignment="Top" Width="267" Height="39" SelectionChanged="ComboboxGenero_SelectionChanged">
+            <ComboBoxItem FontFamily="GothicE" FontSize="14">Terror</ComboBoxItem>
+            <ComboBoxItem FontFamily="GothicE" FontSize="14">Drama</ComboBoxItem>
+            <ComboBoxItem FontFamily="GothicE" FontSize="14">Fantasia</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="sino" HorizontalAlignment="Left" Height="108" Margin="497,244,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" FontFamily="GothicE"/>
+        <TextBox x:Name="dire" HorizontalAlignment="Left" Height="41" Margin="135,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" FontFamily="GothicE"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="359,383,0,0" VerticalAlignment="Top" Width="102"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="381,383,0,0" VerticalAlignment="Top" Width="58"/>
+        <Image Margin="355,387,407,27" Source="uno.png" Stretch="Fill"/>
+        <Image Margin="401,387,361,27" Source="dos.png" Stretch="Fill"/>
+        <Image Margin="446,387,315,26" Source="tres.png" Stretch="Fill"/>
+        <Image Margin="490,385,266,26" Source="cuatro.png" Stretch="Fill"/>
+        <Image Margin="540,387,216,26" Source="cinco.png" Stretch="Fill"/>
+
+    </Grid>
+</Page>

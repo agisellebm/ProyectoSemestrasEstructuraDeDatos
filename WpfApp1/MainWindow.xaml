@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Yellow" Offset="0"/>
+                <GradientStop Color="#FFF30303" Offset="1"/>
+                <GradientStop Color="#FFF87B01" Offset="0.523"/>
+                <GradientStop Color="#FFF87B00" Offset="0.683"/>
+                <GradientStop Color="#FF8F0A09" Offset="0.997"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="PELICULAS &amp; SERIES" HorizontalAlignment="Left" Margin="137,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="GothicE" FontWeight="Bold"/>
+        <Button x:Name="agregarboton" Content="Agregar nuevo elemento" HorizontalAlignment="Left" Height="32" Margin="571,92,0,0" VerticalAlignment="Top" Width="196" Click="agregarelemento_Click" FontFamily="GothicI" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="azboton" Content="a-z" HorizontalAlignment="Left" Height="33" Margin="577,277,0,0" VerticalAlignment="Top" Width="70" Click="az_Click" FontFamily="GothicI" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="zaboton" Content="z-a" HorizontalAlignment="Left" Height="32" Margin="577,363,0,0" VerticalAlignment="Top" Width="70" Click="za_Click" FontFamily="GothicI" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="añoboton1" Content="Año" HorizontalAlignment="Left" Height="33" Margin="668,277,0,0" VerticalAlignment="Top" Width="99" Click="añouno_Click" FontFamily="GothicI" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="añoboton2" Content="Año" HorizontalAlignment="Left" Height="33" Margin="668,364,0,0" VerticalAlignment="Top" Width="99" Click="añodos_Click" FontFamily="GothicI" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="editarboton" Content="Editar" HorizontalAlignment="Left" Height="22" Margin="571,144,0,0" VerticalAlignment="Top" Width="79" Click="editar_Click" FontFamily="GothicE" FontWeight="Bold" FontSize="14"  Visibility="Hidden"/>
+        <Button x:Name="eliminarboton" Content="Eliminar" HorizontalAlignment="Left" Height="22" Margin="688,144,0,0" VerticalAlignment="Top" Width="79" Click="eliminar_Click" FontFamily="GothicE" FontWeight="Bold" FontSize="14"  Visibility="Hidden"/>
+        <Button x:Name="guardarboton" Content="Guardar" HorizontalAlignment="Left" Height="22" Margin="571,221,0,0" VerticalAlignment="Top" Width="79" Click="guardar_Click" FontFamily="GothicE" FontWeight="Bold" FontSize="14"  Visibility="Hidden"/>
+        <Button x:Name="actualizarboton" Content="Actualizar" HorizontalAlignment="Left" Height="22" Margin="571,183,0,0" VerticalAlignment="Top" Width="79" Click="actualizar_Click" FontFamily="GothicE" FontWeight="Bold" FontSize="13"  Visibility="Hidden"/>
+        <Button x:Name="cancelarboton" Content="Cancelar" HorizontalAlignment="Left" Height="22" Margin="688,182,0,0" VerticalAlignment="Top" Width="79" Click="cancelar_Click" FontFamily="GothicE" FontWeight="Bold" FontSize="14"  Visibility="Hidden"/>
+        <RadioButton x:Name="radioserie" Content="Serie" HorizontalAlignment="Left" Height="30" Margin="34,74,0,0" VerticalAlignment="Top" Width="82" Checked="RadioButton1_Checked" FontFamily="GothicE" FontSize="18" FontWeight="Bold"/>
+        <RadioButton x:Name="radiopelicula" Content="Pelicula" HorizontalAlignment="Left" Height="30" Margin="137,74,0,0" VerticalAlignment="Top" Width="108" Checked="RadioButton_Checked" FontFamily="GothicE" FontSize="18" FontWeight="Bold"/>
+        <ListView x:Name="listview" HorizontalAlignment="Left" Height="237" Margin="19,118,0,0" VerticalAlignment="Top" Width="247" FontFamily="GothicE" FontWeight="Bold" FontSize="14" SelectionChanged="listview_SelectionChanged_1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Serie o Pelicula" Width="140"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Year}" Header="Año" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid x:Name="grdMain" HorizontalAlignment="Left" Height="303" Margin="281,92,0,0" VerticalAlignment="Top" Width="273"/>
+        <Button x:Name="guardarboton_Copy" Content="Calificacion" HorizontalAlignment="Left" Height="22" Margin="677,224,0,0" VerticalAlignment="Top" Width="94" Click="calificacion_Click" FontFamily="GothicE" FontWeight="Bold"  Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>
